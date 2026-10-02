@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --xn-bg-light: #FFFFFF;
+    --xn-bg-surface: #F8FAFC;
+    --xn-bg-card: #FFFFFF;
+    --xn-border-line: #E2E8F0;
+    --xn-primary: #008BB9;
+    --xn-primary-hover: #0075A2;
+    --xn-accent: #FFB800;
+    --xn-ink: #0F172A;
+    --xn-body: #334155;
+    --xn-muted: #64748B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #FFFFFF;
+    color: #0F172A;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #008BB9;
+}
+
+/* Animations */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 28s linear infinite;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
